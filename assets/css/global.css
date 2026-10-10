@@ -1,8 +1,8 @@
 :root {
-    --fundo: #ffffff;
-    --texto: #000000;
+    --fundo: #eaeaea;
+    --texto: #111111;
     --card: #000000;
-    --linha: #e0e0e0;
+    --linha: #d0d0d0;
 }
 body.escuro {
     --fundo: #0d0d0d;
