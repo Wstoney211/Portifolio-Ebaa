@@ -1,0 +1,352 @@
+:root {
+    --fundo: #ffffff;
+    --texto: #000000;
+    --card: #000000;
+    --linha: #e0e0e0;
+}
+body.escuro {
+    --fundo: #0d0d0d;
+    --texto: #eeeeee;
+    --card: #1d1d1d;
+    --linha: #323e40;
+}
+* {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background: var(--fundo);
+    color: var(--texto);
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+button {
+    color: inherit;
+}
+button:hover {
+    cursor: pointer;
+}
+section {
+    scroll-margin-top: 70px;
+}
+nav {
+    background: var(--linha);
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    height: 64px;
+    padding: 0px 2rem;
+}
+.brand-link {
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    font-size: 0.9rem;
+}
+.theme-btn {
+    background: transparent;
+    border: 1px solid var(--texto);
+    border-radius: 3px;
+    width: 36px;
+    height: 36px;
+}
+.hero,
+.about,
+.skills,
+.projects,
+.contact {
+    border-bottom: 1px solid var(--linha);
+    padding: 4rem 2.5rem;
+}
+.hero {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+.hero h1 {
+    font-size: 6rem;
+    font-weight: 400;
+}
+.hero h2 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    min-height: 3.5rem;
+}
+.hero p {
+    font-size: 1.4rem;
+    max-width: 640px;
+}
+#digitando::after {
+    content: "|";
+    animation: piscar 1s infinite;
+}
+@keyframes piscar {
+    50% {
+        opacity: 0;
+    }
+}
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+}
+.text-btn {
+    border: 1px solid var(--texto);
+    transition: 0.4s ease;
+    padding: 10px 20px;
+    border-radius: 3px;
+    font-size: 0.9rem;
+}
+.text-btn:hover {
+    background: var(--texto);
+    color: var(--fundo);
+}
+.size {
+    font-size: 1.1rem;
+}
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding-bottom: 1rem;
+}
+.section-text {
+    font-size: 1.1rem;
+    max-width: 640px;
+    padding-bottom: 2rem;
+}
+.about-row,
+.skills-row,
+.projects-row,
+.contact-card {
+    display: grid;
+    gap: 1.5rem;
+}
+.about-row,
+.contact-card {
+    grid-template-columns: 1fr 1.3fr;
+}
+.skills-row,
+.projects-row {
+    grid-template-columns: repeat(3, 1fr);
+}
+.card {
+    background: var(--card);
+    color: #ffffff;
+    clip-path: polygon(0 0, calc(100% - 50px) 0, 100% 50px, 100% 100%, 0 100%);
+    padding: 2rem;
+}
+.card h1 {
+    font-size: 1.4rem;
+    font-weight: 400;
+    padding-bottom: 1rem;
+}
+.card p,
+.card li {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    padding-bottom: 0.5rem;
+}
+.info-line {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    padding: 0.5rem 0;
+}
+.skill-card ul {
+    list-style: none;
+}
+.skill-card i {
+    width: 1.5rem;
+    margin-right: 0.5rem;
+}
+.project-card {
+    padding: 0;
+}
+.project-image {
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid var(--linha);
+}
+.project-image h1 {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 3rem;
+    opacity: 0.15;
+    padding: 0;
+}
+.project-info {
+    padding: 1.5rem;
+}
+.project-info h1 {
+    font-size: 1.2rem;
+}
+.project-info a {
+    font-size: 0.85rem;
+    border-bottom: 1px solid #ffffff;
+}
+.github-area {
+    display: flex;
+    justify-content: center;
+    padding-top: 3rem;
+}
+.contact-card {
+    padding: 3rem;
+}
+.contact-box {
+    background: #ffffff;
+    color: #000000;
+    border-radius: 3px;
+    margin-top: 2rem;
+    padding: 1.5rem;
+}
+.contact-box i,
+.footer-content i {
+    width: 1.5rem;
+}
+#formulario {
+    display: flex;
+    flex-direction: column;
+}
+.form-input,
+#mensagem {
+    height: 56px;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    background: #ffffff;
+    color: #000000;
+    border: 1px solid var(--linha);
+    border-radius: 3px;
+    outline: none;
+    font-size: 1rem;
+}
+#mensagem {
+    height: 120px;
+    resize: none;
+}
+.form-button {
+    height: 56px;
+    margin: 0.5rem 0;
+    background: #000000;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 3px;
+    font-size: 1rem;
+}
+.form-button:hover {
+    transition: 0.6s;
+    background: #ffffff;
+    color: #000000;
+}
+footer {
+    background: #000000;
+    color: #ffffff;
+    padding: 3rem 2rem 1.5rem 2rem;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+.footer-content p,
+.footer-content a {
+    display: block;
+    font-size: 0.9rem;
+    padding: 0.3rem 0;
+}
+.copyright {
+    text-align: center;
+    font-size: 0.8rem;
+    padding-top: 2rem;
+}
+dialog {
+    background: var(--card);
+    color: #ffffff;
+    border: 1px solid var(--linha);
+    width: 90%;
+    max-width: 420px;
+    margin: auto;
+    padding: 2rem;
+}
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.7);
+}
+dialog h1 {
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+}
+dialog p {
+    line-height: 1.6;
+    padding-bottom: 1rem;
+}
+dialog button {
+    width: 100%;
+}
+
+@media (max-width: 900px) {
+    .hero h1 {
+        font-size: 4rem;
+    }
+    .about-row,
+    .skills-row,
+    .projects-row,
+    .contact-card {
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 600px) {
+    nav {
+        height: auto;
+        padding: 0.8rem 1rem;
+        gap: 0.5rem;
+    }
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 0.8rem;
+    }
+    .hero,
+    .about,
+    .skills,
+    .projects,
+    .contact {
+        padding: 2.5rem 1rem;
+    }
+    .hero {
+        height: auto;
+        min-height: 85vh;
+    }
+    .hero h1 {
+        font-size: 2.6rem;
+    }
+    .hero h2 {
+        font-size: 1.2rem;
+    }
+    .hero p {
+        font-size: 1.1rem;
+    }
+    .hero-buttons {
+        flex-wrap: wrap;
+    }
+    .contact-card {
+        padding: 2.5rem 1.5rem;
+    }
+    .footer-content {
+        flex-direction: column;
+    }
+}
